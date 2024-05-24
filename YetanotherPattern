@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Solution {
+
+	public static void main(String[] args)  
+	{
+	    // Write your code
+		Scanner sc=new Scanner(System.in);
+		 int T=sc.nextInt();
+		// for(int i=1;i<=t;i++){
+		// 	int n=sc.nextInt();
+		// } 
+		// for(int i=1;i<=n;i++){
+		// 	for(int j=n-i+1;j>=1;j--){
+		// 		System.out.print("*");
+		// 	}
+		// }
+		for (int t = 0; t < T; t++) {
+            int N = sc.nextInt();
+            generateAndPrintPattern(N);
+        }
+
+       
+    }
+	public static void generateAndPrintPattern(int n) {
+		  for (int i = 0; i < n; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print(' ');
+            }
+            for (int j = 0; j < n - i; j++) {
+                System.out.print('*');
+            }
+            System.out.println();
+        }
+        if (n > 1) {
+            System.out.println();
+        }
+	}
+}
